@@ -8,7 +8,9 @@
   <p><%= movie.overview %></p>
   <p><%= movie.actor %></p>
   <p><%= movie.rating %></p>
-  
+
+  <%= link_to "View", movie_path(movie) %>
   <%= link_to "Edit", edit_movie_path(movie) %>
+  <%= link_to 'Delete', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
  
 <% end %>
