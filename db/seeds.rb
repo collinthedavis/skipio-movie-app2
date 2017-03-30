@@ -13,3 +13,22 @@ Movie.create!(
 	rating: "9",
 	poster: "mad_max.jpg"
 	)
+
+Movie.create!(
+	title: "John Wick 2",
+	genre: "Action",
+	overview: "John Wick shoots a bunch of people in the head.",
+	actor: "Keanu Reeves",
+	rating: "9",
+	poster: "john_wick2.jpg"
+	)
+
+Movie.create!(
+	title: "Zootopia",
+	genre: "Family",
+	overview: "A bunny becomes a cop and defys social expectations in an animail city.",
+	actor: "Jason Bateman",
+	rating: "7",
+	poster: "zootopia.jpg"
+	)
+

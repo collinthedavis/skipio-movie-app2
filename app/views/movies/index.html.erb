@@ -1,17 +1,69 @@
-<h1>Movies</h1>
+<div class="collapse bg-inverse" id="navbarHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 py-4">
+        <h4 class="text-white">About</h4>
+        <p class="text-muted">This is the movie app I did for a coding challenge</p>
+      </div>
+      <div class="col-sm-4 py-4">
+        <h4 class="text-white">Contact</h4>
+        <ul class="list-unstyled">
+          <li><a href="https://github.com/collinthedavis/skipio-movie-app2" class="text-white">Check the repo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand">Album</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>
 
-<%= link_to "Add New Moive", new_movie_url %>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Movies</h1>
+    <p class="lead text-muted">Here is a list of some movies, I like feel free to add any of your own.</p>
+    <p>
+      <%= link_to "Add New Moive", new_movie_url, class: "btn btn-primary" %>
+    </p>
+  </div>
+</section>
 
-<% @movies.each do |movie| %>
-  <p><%= movie.title %></p>
-  <p><%= movie.genre %></p>
-  <p><%= movie.overview %></p>
-  <p><%= movie.actor %></p>
-  <p><%= movie.rating %></p>
-  <p><%= image_tag movie.poster, width:"175" %></p>
 
-  <%= link_to "View", movie_path(movie) %>
-  <%= link_to "Edit", edit_movie_path(movie) %>
-  <%= link_to 'Delete', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
- 
-<% end %>
+<div class="album text-muted">
+  <div class="container">
+
+    <div class="row">
+
+    	<% @movies.each do |movie| %>
+
+	      <div class="card">
+	        <p><%= image_tag movie.poster, width:"175" unless movie.poster.nil? %></p>
+	        <p class="card-text"><%= movie.title %>:</p>
+	        <p class="card-text"><%= movie.overview %></p>
+	        
+	        <%= link_to "View", movie_path(movie) %>
+					<%= link_to "Edit", edit_movie_path(movie) %>
+					<%= link_to 'Delete', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
+	      </div>
+
+    	<% end %>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>

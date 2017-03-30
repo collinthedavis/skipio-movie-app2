@@ -1,2 +1,11 @@
 <h1>Show Movies</h1>
-<%= @movie.title %>
+<p><%= @movie.title %></p>
+<p><%= @movie.genre %></p>
+<p><%= @movie.overview %></p>
+<p><%= @movie.actor %></p>
+<p><%= @movie.rating %></p>
+<%= image_tag @movie.poster, width:"300" unless @movie.poster.nil? %>
+
+<%= link_to "Back to list", root_path %>
+<%= link_to "Edit", edit_movie_path(@movie) %>
+<%= link_to 'Delete', movie_path(@movie), method: :delete, data: { confirm: 'Are you sure?' } %>
