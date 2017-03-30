@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Movie.create!(
+	title: "Mad Max: Fury Road",
+	genre: "Action",
+	overview: "Max and Furiosa drive cars and blow stuff up.",
+	actor: "Tom Hardy, Charlize Theron",
+	rating: "9",
+	poster: "mad_max.jpg"
+	)

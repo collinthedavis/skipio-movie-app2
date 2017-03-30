@@ -8,6 +8,7 @@
   <p><%= movie.overview %></p>
   <p><%= movie.actor %></p>
   <p><%= movie.rating %></p>
+  <p><%= image_tag movie.poster, width:"175" %></p>
 
   <%= link_to "View", movie_path(movie) %>
   <%= link_to "Edit", edit_movie_path(movie) %>
