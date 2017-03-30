@@ -6,3 +6,5 @@
 
 * Once cloned run create the database then run: rails db:setup
 
+* Still a work in progress, stopped here to stay around the 4 hour limit
+
